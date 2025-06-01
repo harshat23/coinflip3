@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Name - Coin Flip</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        #demo {
+            width: 100px;
+            height: 100px;
+            color: white;
+            background-color: rgb(212, 116, 116);
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            animation-duration: 3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        #intro {
+            font-size: 48px;
+            margin-top: 30px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Coin Flip Game</h1>
+
+    <button id="demo" onclick="myfunction()">Flip</button>
+    <p id="intro"></p>
+
+    <script>
+        function myfunction() {
+            const ele = Math.random();
+            const outcome = Math.floor(ele * 2);
+            
+            if (outcome === 1) {
+                document.getElementById("intro").innerHTML = "Heads";
+            } else {
+                document.getElementById("intro").innerHTML = "Tails";
+            }
+        }
+    </script>
+</body>
+</html>
